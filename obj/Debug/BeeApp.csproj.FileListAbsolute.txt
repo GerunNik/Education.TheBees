@@ -1,0 +1,11 @@
+C:\Users\Nikola.Gerun.ARGUSNET\Documents\Visual Studio 2017\Projects\BeeApp\bin\Debug\BeeApp.exe.config
+C:\Users\Nikola.Gerun.ARGUSNET\Documents\Visual Studio 2017\Projects\BeeApp\bin\Debug\BeeApp.exe
+C:\Users\Nikola.Gerun.ARGUSNET\Documents\Visual Studio 2017\Projects\BeeApp\bin\Debug\BeeApp.pdb
+C:\Users\Nikola.Gerun.ARGUSNET\Documents\Visual Studio 2017\Projects\BeeApp\obj\Debug\BeeApp.csprojAssemblyReference.cache
+C:\Users\Nikola.Gerun.ARGUSNET\Documents\Visual Studio 2017\Projects\BeeApp\obj\Debug\BeeApp.Properties.Resources.resources
+C:\Users\Nikola.Gerun.ARGUSNET\Documents\Visual Studio 2017\Projects\BeeApp\obj\Debug\BeeApp.csproj.GenerateResource.cache
+C:\Users\Nikola.Gerun.ARGUSNET\Documents\Visual Studio 2017\Projects\BeeApp\obj\Debug\BeeApp.csproj.CoreCompileInputs.cache
+C:\Users\Nikola.Gerun.ARGUSNET\Documents\Visual Studio 2017\Projects\BeeApp\obj\Debug\BeeApp.exe
+C:\Users\Nikola.Gerun.ARGUSNET\Documents\Visual Studio 2017\Projects\BeeApp\obj\Debug\BeeApp.pdb
+C:\Users\Nikola.Gerun.ARGUSNET\Documents\Visual Studio 2017\Projects\BeeApp\obj\Debug\BeeApp.BeehiveSim.resources
+C:\Users\Nikola.Gerun.ARGUSNET\Documents\Visual Studio 2017\Projects\BeeApp\obj\Debug\BeeApp.Form1.resources
