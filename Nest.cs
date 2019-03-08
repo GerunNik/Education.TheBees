@@ -81,17 +81,17 @@ namespace BeeApp
             }
         }
 
-        public void Walk()
+        public void Walk(Random r)
         {
-            if (Honey > MinimumNectarForBee && new Random().Next(10) == 1)
+            if (Honey > MinimumNectarForBee && r.Next(10) == 1)
             {
-                NewBee(new Random());
+                NewBee(r);
             }
         }
 
         public Point LookupPlace(string PlaceToFind)
         {
-            foreach (var item in Places)
+            foreach (var item in Places) 
             {
                 if (item.Key == PlaceToFind)
                 {

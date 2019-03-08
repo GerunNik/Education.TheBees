@@ -34,13 +34,13 @@ namespace BeeApp
             }
         }
 
-        public void Walk()
+        public void Walk(Random r)
         {
-            Nest.Walk();
+            Nest.Walk(r);
 
             for (int i = Bees.Count - 1; i >= 0; i--)
             {
-                Bees[i].Walk();
+                Bees[i].Walk(r);
                 if (Bees[i].State == BeeStatus.InRetirement)
                 {
                     Bees.Remove(Bees[i]);

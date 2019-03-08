@@ -17,8 +17,8 @@ namespace BeeApp
         public bool Alive;
         public Point Location;
 
-        private const int MinLifeExpectancy = 15;
-        private const int MaxLifeExpectancy = 30;
+        private const int MinLifeExpectancy = 15000;
+        private const int MaxLifeExpectancy = 30000;
         private const double StartingNectar = 1.5;
         private const double MaxNectar = 5;
         private const double NectarGrowth = 0.01;
@@ -36,7 +36,7 @@ namespace BeeApp
 
         public double CollectNectar()
         {
-            if (Nectar > collectableNectar)
+            if (Nectar >= collectableNectar)
             {
                 Nectar -= collectableNectar;
                 CollectedNectar += collectableNectar;
@@ -48,7 +48,7 @@ namespace BeeApp
         public void Walk()
         {
             Age++;
-            if (Age < LifeSpan)
+            if (Age <= LifeSpan)
             {
                 Nectar += NectarGrowth;
                 if (Nectar >= MaxNectar)

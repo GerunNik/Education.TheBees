@@ -47,12 +47,11 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txt_BeeBox = new System.Windows.Forms.RichTextBox();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txt_BeeBox = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -199,8 +198,7 @@
             this.toolStripLabel2,
             this.toolStripSeparator,
             this.openToolStripButton,
-            this.saveToolStripButton,
-            this.printToolStripButton});
+            this.saveToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(302, 25);
@@ -226,17 +224,10 @@
             this.toolStripLabel2.Text = "Reset Simulation";
             this.toolStripLabel2.Click += new System.EventHandler(this.toolStripLabel2_Click);
             // 
-            // timer1
+            // toolStripSeparator
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // txt_BeeBox
-            // 
-            this.txt_BeeBox.Location = new System.Drawing.Point(12, 186);
-            this.txt_BeeBox.Name = "txt_BeeBox";
-            this.txt_BeeBox.Size = new System.Drawing.Size(278, 92);
-            this.txt_BeeBox.TabIndex = 17;
-            this.txt_BeeBox.Text = "";
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
             // 
             // openToolStripButton
             // 
@@ -258,19 +249,17 @@
             this.saveToolStripButton.Text = "&Save";
             this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
-            // printToolStripButton
+            // timer1
             // 
-            this.printToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
-            this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripButton.Name = "printToolStripButton";
-            this.printToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.printToolStripButton.Text = "&Print";
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // toolStripSeparator
+            // txt_BeeBox
             // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
+            this.txt_BeeBox.Location = new System.Drawing.Point(12, 186);
+            this.txt_BeeBox.Name = "txt_BeeBox";
+            this.txt_BeeBox.Size = new System.Drawing.Size(278, 92);
+            this.txt_BeeBox.TabIndex = 17;
+            this.txt_BeeBox.Text = "";
             // 
             // BeehiveSim
             // 
@@ -317,6 +306,5 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripButton openToolStripButton;
         private System.Windows.Forms.ToolStripButton saveToolStripButton;
-        private System.Windows.Forms.ToolStripButton printToolStripButton;
     }
 }

@@ -118,7 +118,7 @@ namespace BeeApp
         {
             if (toolStripLabel1.Text == "Stop Simulation")
             {
-                Form1.World.Walk();
+                Form1.World.Walk(new Random());
                 RefreshStatistics();
                 FillBeeText();
                 passedFrames++;

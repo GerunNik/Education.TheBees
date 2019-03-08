@@ -41,7 +41,7 @@ namespace BeeApp
             Nest = nest;
         }
 
-        public void Walk()
+        public void Walk(Random r)
         {
             Age++;
             switch (State)
@@ -53,13 +53,14 @@ namespace BeeApp
                     }
                     else if (World.Flowers.Count > 0 && Nest.UseHoney(HoneyConsumption))
                     {
-                        Flower flower = World.Flowers[new Random().Next(World.Flowers.Count)];
+                        Flower flower = World.Flowers[r.Next(World.Flowers.Count)];
                         if (flower.Nectar <= MinNectarInFlower && flower.Alive)
                         {
                             TargetFlower = flower;
                             State = BeeStatus.FlyingToFlower;
                         }
                     }
+
                     break;
 
                 case BeeStatus.FlyingToFlower:
@@ -82,6 +83,7 @@ namespace BeeApp
                             State = BeeStatus.CollectingNectar;
                         }
                     }
+
                     break;
 
                 case BeeStatus.CollectingNectar:
@@ -94,6 +96,7 @@ namespace BeeApp
                     {
                         State = BeeStatus.FlyingToNest;
                     }
+
                     break;
 
                 case BeeStatus.FlyingToNest:
@@ -107,6 +110,22 @@ namespace BeeApp
                     }
                     else
                     {
+                        if (MoveToLocation(Nest.LookupPlace("HoneyFactory")))
+                        {
+                            State = BeeStatus.ProducingHoney;
+                        }
+                    }
+
+                    break;
+
+                case BeeStatus.ProducingHoney:
+                    if (CollectedNectar < 0.5)
+                    {
+                        CollectedNectar = 0;
+                        State = BeeStatus.Useless;
+                    }
+                    else
+                    {
                         if (Nest.AddHoney(0.5))
                         {
                             CollectedNectar -= 0.5;
@@ -116,14 +135,7 @@ namespace BeeApp
                             CollectedNectar = 0;
                         }
                     }
-                    break;
 
-                case BeeStatus.ProducingHoney:
-                    if (CollectedNectar < 0.5)
-                    {
-                        CollectedNectar = 0;
-                        State = BeeStatus.Useless;
-                    }
                     break;
 
                 case BeeStatus.InRetirement:
@@ -160,11 +172,6 @@ namespace BeeApp
                 }
             }
             return false;
-        }
-
-        void currentStatus()
-        {
-            
         }
     }
 }
